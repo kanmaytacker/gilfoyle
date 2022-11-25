@@ -1,0 +1,72 @@
+---
+---
+
+<div class="waitlist-form">
+  <form
+    netlify
+    netlify-honeypot
+    name="waitlist"
+    method="POST"
+    action="/success"
+  >
+    <p class="hidden">
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+      </label>
+    </p>
+    <input type="hidden" name="form-name" value="waitlist" />
+    <input id="email" type="email" name="email" required />
+    <button class="btn" type="submit">Request invite</button>
+  </form>
+</div>
+
+<style>
+  .waitlist-form {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  input {
+    width: 30%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+  .hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: #000;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn:hover {
+    border-color: #fff;
+    background: #000;
+    color: #fff;
+  }
+</style>
