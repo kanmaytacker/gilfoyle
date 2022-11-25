@@ -1,0 +1,99 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="Gilfoyle | Build Better">
+  <main>
+    <img class="logo" src="logo-edited.png" alt="Gilfoyle" />
+    <div class="header">
+      <h1>Gilfoyle</h1>
+      <div class="intro">
+        <p>Your personal AI VP of Architecture.</p>
+      </div>
+      <button class="btn">Request invite</button>
+      <script>
+        // Get the button
+        const button = document.querySelector('.btn');
+
+        // Add click handler
+        button.addEventListener('click', handleClick);
+
+        // On click, update the button text
+        function handleClick() {
+          button.textContent = 'No slots available!';
+          // Set color to red by changing the class
+          button.classList.add('btn--red');
+        }
+      </script>
+    </div>
+
+    <footer class="footer">Allfather.</footer>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    text-align: center;
+  }
+  .logo {
+    width: 200px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 80ch;
+    height: 100%;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  main .header h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: #000;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn:hover {
+    border-color: #fff;
+    background: #000;
+    color: #fff;
+  }
+
+  .btn--red {
+    border-color: #ff0000;
+    background: #ff0000;
+    color: #fff;
+  }
+
+  .btn--red:hover {
+    border-color: #ff0000;
+    background: #ff0000;
+    color: #fff;
+  }
+
+  footer {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
