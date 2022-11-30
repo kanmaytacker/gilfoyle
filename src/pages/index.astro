@@ -14,7 +14,7 @@ import SignupForm from '../components/SignupForm.astro';
     </div>
     <SignupForm />
 
-    <footer class="footer">Allfather.</footer>
+    <footer class="footer"><a href="https://allfather.space/">Allfather.</a></footer>
   </main>
 </Layout>
 
@@ -63,5 +63,16 @@ import SignupForm from '../components/SignupForm.astro';
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+  }
+
+  footer a:hover {
+    background: #fff;
+    color: #000;
   }
 </style>
