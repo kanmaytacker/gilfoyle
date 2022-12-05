@@ -36,7 +36,7 @@
 
   input {
     width: 30%;
-    padding: 15px;
+    padding: 15px 0;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
   }
@@ -66,5 +66,21 @@
 
   .btn:hover {
     background: hsl(0, 0%, 10%);
+  }
+
+  @media (max-width: 768px) {
+    form {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    input,
+    .btn {
+      width: 100%;
+    }
+
+    .waitlist-form {
+      width: 90%;
+    }
   }
 </style>
